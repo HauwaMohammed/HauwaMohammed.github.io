@@ -1,245 +1,299 @@
-* {
-  box-sizing: border-box; }
+#row, #row2,  {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin-right: 10px;
+  float: left;
+}
+#row1 {
+  float: left;
+  margin-right: 5px;
+}
+
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background:#ff0;
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;  /* Height of the footer */
+}
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #606c71; }
+	padding: 0;
+    margin: 0  auto;
+    height:100%;
+    background-image: url('../images/cable-computer-sata-s-ata-connection-plug-pc-2.jpg');
+    min-height: 600px;
+    padding: 10px;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #FFFFFC;
+}
 
 a {
-  color: #1e6bb8;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
+    text-decoration: none;
+}
 
-.btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
-  .btn + .btn {
-    margin-left: 1rem; }
+a.class1 {
+    margin-left: 40%;
 
-.btn:hover {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3); }
+}
 
-@media screen and (min-width: 64em) {
-  .btn {
-    padding: 0.75rem 1rem; } }
+a.class2{
+	color: #AF5699;
+	font-family:Brushstroke, fantasy;
+	font-size: 25px;
+	text-decoration: none;
+}
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .btn {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.9rem; } }
+a.class2:hover {
+	color: pink;
+}
 
-@media screen and (max-width: 42em) {
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.9rem; }
-    .btn + .btn {
-      margin-top: 1rem;
-      margin-left: 0; } }
 
-.page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+a.current {
+    font-size: 25px;
+    font-family:Brushstroke, fantasy;
+    text-decoration: underline;
+    color: #AF5699;
+}
 
-@media screen and (min-width: 64em) {
-  .page-header {
-    padding: 5rem 6rem; } }
+a.current:hover {
+    color: pink;
+}
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
-    padding: 3rem 4rem; } }
+#nav{
+	position: relative;
+    text-align: center;
+    background-position: center center;
+}
 
-@media screen and (max-width: 42em) {
-  .page-header {
-    padding: 2rem 1rem; } }
+#menu-icon {
+    display: hidden;
+    width: 40px;
+    height: 50px;
+    border: 10px black;
+} 
 
-.project-name {
-  margin-top: 0;
-  margin-bottom: 0.1rem; }
+a:hover#menu-icon {
+    background-color: #444;
+    border-radius: 4px 4px 0 0;
 
-@media screen and (min-width: 64em) {
-  .project-name {
-    font-size: 3.25rem; } }
+}
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-name {
-    font-size: 2.25rem; } }
+ul{
+	padding: 10px;
+	margin: 0;
+	position: absolute;
+	max-width: 1200px;
+}
 
-@media screen and (max-width: 42em) {
-  .project-name {
-    font-size: 1.75rem; } }
+li{
+	display: inline-block;
+	padding: 0px 10px 0px 10px;
+}
 
-.project-tagline {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7; }
 
-@media screen and (min-width: 64em) {
-  .project-tagline {
-    font-size: 1.25rem; } }
+input {
+	border: 0;
+	padding: 10px;
+	font-size: 13px;
+}
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-tagline {
-    font-size: 1.15rem; } }
+input[type="submit"] {
+	color: white;
+	background-color: #ff6699;
+}
 
-@media screen and (max-width: 42em) {
-  .project-tagline {
-    font-size: 1rem; } }
 
-.main-content :first-child {
-  margin-top: 0; }
-.main-content img {
-  max-width: 100%; }
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: normal;
-  color: #159957; }
-.main-content p {
-  margin-bottom: 1em; }
-.main-content code {
-  padding: 2px 4px;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.9rem;
-  color: #383e41;
-  background-color: #f3f6fa;
-  border-radius: 0.3rem; }
-.main-content pre {
-  padding: 0.8rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #567482;
-  word-wrap: normal;
-  background-color: #f3f6fa;
-  border: solid 1px #dce6f0;
-  border-radius: 0.3rem; }
-  .main-content pre > code {
+.Jumbotron{ 
     padding: 0;
+    margin: 0  auto;
+    background-image: url('../images/cable-computer-sata-s-ata-connection-plug-pc-2.jpg');
+    min-height: 650px;
     margin: 0;
-    font-size: 0.9rem;
-    color: #567482;
-    word-break: normal;
-    white-space: pre;
-    background: transparent;
-    border: 0; }
-.main-content .highlight {
-  margin-bottom: 1rem; }
-  .main-content .highlight pre {
-    margin-bottom: 0;
-    word-break: normal; }
-.main-content .highlight pre, .main-content pre {
-  padding: 0.8rem;
-  overflow: auto;
-  font-size: 0.9rem;
-  line-height: 1.45;
-  border-radius: 0.3rem; }
-.main-content pre code, .main-content pre tt {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0; }
-  .main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after {
-    content: normal; }
-.main-content ul, .main-content ol {
-  margin-top: 0; }
-.main-content blockquote {
-  padding: 0 1rem;
-  margin-left: 0;
-  color: #819198;
-  border-left: 0.3rem solid #dce6f0; }
-  .main-content blockquote > :first-child {
-    margin-top: 0; }
-  .main-content blockquote > :last-child {
-    margin-bottom: 0; }
-.main-content table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all; }
-  .main-content table th {
-    font-weight: bold; }
-  .main-content table th, .main-content table td {
-    padding: 0.5rem 1rem;
-    border: 1px solid #e9ebec; }
-.main-content dl {
-  padding: 0; }
-  .main-content dl dt {
-    padding: 0;
-    margin-top: 1rem;
-    font-size: 1rem;
-    font-weight: bold; }
-  .main-content dl dd {
-    padding: 0;
-    margin-bottom: 1rem; }
-.main-content hr {
-  height: 2px;
-  padding: 0;
-  margin: 1rem 0;
-  background-color: #eff0f1;
-  border: 0; }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    ;
+}
 
-@media screen and (min-width: 64em) {
-  .main-content {
-    max-width: 64rem;
-    padding: 2rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem; } }
+.name{
+    padding: 10px;
+    margin-top: 60px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    float: left;
+    color: #592124;
+    font-family: 'Ultra', serif;
+    font-variant: small-caps;
+   
+}
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .main-content {
-    padding: 2rem 4rem;
-    font-size: 1.1rem; } }
+.social{
+    padding: 10px;
+    margin-top: 80px;
+    height: 20px;
+    line-height: 200px;
+    float: left;
+    margin-left: 500px;
+    margin-right: 1000px;
+}
 
-@media screen and (max-width: 42em) {
-  .main-content {
-    padding: 2rem 1rem;
-    font-size: 1rem; } }
+footer{
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    text-align:center;
+    padding: 10px; 
+    background: #000000;
+    opacity:0.4;
+    margin-top: 32px;
+}
 
-.site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px #eff0f1; }
+p{
+    color: Blue;
+}
 
-.site-footer-owner {
-  display: block;
-  font-weight: bold; }
+.button1{
+    color:white;
+    background: lightblue;
+    border: 10px solid;
+    outline:none;
+    padding: 15px;
+    cursor: pointer;
+    height: 5px;
+    border-radius: 5px;
+    float: left;
+    position: relative;
+}
 
-.site-footer-credits {
-  color: #819198; }
+/*Blog*/
+article{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 50px; 
+    background-color: #BAD1D1;
+}
 
-@media screen and (min-width: 64em) {
-  .site-footer {
-    font-size: 1rem; } }
+p.blog{
+    text-indent: 50px;
+    color: black;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+ 
+h2.blog{
+    color: darkblue;
+    font-size: 30px;
+    padding: 10px;
+    font-variant: small-caps;
+}
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .site-footer {
-    font-size: 1rem; } }
+button{
+        background-color: #F7FA99;
+        transition: all 0.5s;
+        cursor: pointer;
+}
 
-@media screen and (max-width: 42em) {
-  .site-footer {
-    font-size: 0.9rem; } }
+.page-header{
+   margin-top: 20px;
+   margin-left: 30px;
+    color: hotpink;
+    padding: 10px;
+    font-size: 28px;
+}
+form{
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 60px;
+    background-color: lightblue;
+    padding-top: 30px;
+    border: 5px solid black;
+}
+.subscribe{
+    color: green;
+    text-align: center;
+}
+
+.social{
+    width: 30px;
+}
+
+/*About ME*/
+ol li{
+    margin-top: 70px;
+    display: block;
+    font-size: 30px;
+}
+
+.main{
+    background: lightblue;
+    margin-left: 40px;
+    margin-right: 70px;
+    padding: 5px;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 768px) {
+
+    header {
+        position: absolute;
+
+    }
+
+    #menu-icon {
+
+        display:inline-block;
+        width: 60px;
+        height: 50px;
+        background: url(../images/1458018922_star.svg) no-repeat hotpink center;
+        position: relative;
+
+    }
+
+    nav ul, nav:active#menu-icon { 
+
+        display: none;
+        position: absolute;
+        background: #FFFFFC;
+        border: 5px solid #444;
+        border-radius: 4px 0 4px 4px;
+        text-align: center;
+    }
+
+    nav li {
+        text-align: center;
+        width: 100px;
+        margin: 0;
+
+    }
+
+    nav:hover ul{
+
+        display: block;
+        width: 220px;
+    }
